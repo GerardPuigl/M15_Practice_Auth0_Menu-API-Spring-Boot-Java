@@ -8,24 +8,27 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
 
 public class Item {
-    private final Long id;
+    private Long id;
 
     @NotNull(message = "name is required")
     @Pattern(regexp="^[a-zA-Z ]+$", message = "name must be a string")
-    private final String name;
+    private String name;
 
     @NotNull(message = "price is required")
     @Positive(message = "price must be positive")
-    private final Long price;
+    private Long price;
 
     @NotNull(message = "description is required")
     @Pattern(regexp="^[a-zA-Z ]+$", message = "description must be a string")
-    private final String description;
+    private String description;
 
     @NotNull(message = "image is required")
     @URL(message = "image must be a URL")
-    private final String image;
-
+    private String image;
+	
+    public Item() {
+    }
+    
     public Item(
             Long id,
             String name,
