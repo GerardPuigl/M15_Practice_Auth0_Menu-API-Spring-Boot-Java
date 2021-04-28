@@ -10,6 +10,10 @@ import org.springframework.util.Assert;
 
 import java.util.List;
 
+/**
+ * OAuth2TokenValidator interface and its method validate provide means to verify custom OAuth 2.0 Token attributes. 
+ * With the class above, you ensure only tokens containing the specified audience, or aud claim to be exact, are valid.
+ */
 class AudienceValidator implements OAuth2TokenValidator<Jwt> {
   private final String audience;
 
